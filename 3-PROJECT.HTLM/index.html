@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBMX.01</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <audio id="mySong" loop>
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="music-btn" onclick="toggleMusic()">
+        <i id="music-icon" class="fas fa-volume-mute"></i>
+    </button>
+
+    <div class="container">
+        <div class="profile-card">
+            
+            <div class="avatar-container">
+                <img src="image.png" alt="Profile" class="avatar">
+            </div>
+
+            <h1 class="glow-text">DEKU<span>(EREN X CHEAT)</span></h1>
+            <p class="subtitle">Developer and Editor</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Earth</p>
+
+            <div class="status-box">
+                <div class="status-content">
+                    <img src="image.png" class="status-icon">
+                    <div class="status-text">
+                        <span class="username">SBMX.01 <span class="badge">🔥</span></span>
+                        <span class="activity">HATER KI MA KI CHUT</span>
+                    </div>
+                </div>
+                <div class="tech-icon">EXC</div>
+            </div>
+
+            <div class="socials">
+    <a href="https://discord.gg/jbq7yxQUkW" target="_blank" title="Discord">
+        <i class="fab fa-discord"></i>
+    </a>
+
+    <a href="https://www.instagram.com/__subham__.x/" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://www.youtube.com/@ERENXCHEAT02" target="_blank">
+        <i class="fab fa-youtube"></i>
+    </a>
+
+    <a href="https://t.me/@REALDEKU" target="_blank">
+        <i class="fab fa-telegram"></i>
+    </a>
+</div>
+    <script>
+        var song = document.getElementById("mySong");
+        var icon = document.getElementById("music-icon");
+
+        function toggleMusic() {
+            if (song.paused) {
+                song.play();
+                icon.classList.remove("fa-volume-mute");
+                icon.classList.add("fa-volume-up");
+            } else {
+                song.pause();
+                icon.classList.remove("fa-volume-up");
+                icon.classList.add("fa-volume-mute");
+            }
+        }
+    </script>
+</body>
+</html>
